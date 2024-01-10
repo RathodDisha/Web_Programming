@@ -1,20 +1,20 @@
-<html>
-<body>
-<form action="catch.php" method="get" />
-Enter First Name:<input type="text" name="my_fname" /><br> 
-Enter Last Name:<input type="text" name="my_lname" /><br> 
-Enter Address:<input type="text" name="my_add" /><br> 
-Enter City:<input type="text" name="my_city" /><br> 
-Enter State:<input type="text" name="my_sts" /><br> 
-Enter Mobail no:<input type="text" name="my_fno" /><br> 
-Enter Class:<input type="text" name="my_class" /><br> 
-Enter Division:<input type="text" name="my_div" /><br> 
-<input type="submit" name="submit" value="submit" /><br> 
+<?php
+
+$fno=$_REQUEST['sno'];
+$lno=$_REQUEST['lno'];
+
+for($i=$fno;$i<=$lno;$i++)
+{
+	echo "<table cellpadding=5 cellspacing=5 border=5 align=center>";
+	for($j=1;$j<=10;$j++)
+	{
+		echo "<tr>";
+		$mul=$i*$j;
+		echo "<td>".$i." * ".$j." = ".$mul."</td>";
+		echo "</tr>";
+	}
+	echo "<table><style> table{float:left;}</style>";
+}
 
 
-
-
-
-</form>
-</body>
-</html>
+?>
